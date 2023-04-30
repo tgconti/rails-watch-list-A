@@ -1,0 +1,7 @@
+<h1>Home</h1>
+<h2>List of Your Favorite Movies</h2>
+<hr>
+<% @lists.each do |list| %>
+  <%= link_to list.name, list_path(list.id), style: "text-decoration: none" %>
+<% end %>
+<%= link_to 'Add New List', new_list_path %>
